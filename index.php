@@ -60,7 +60,7 @@ class Ship extends Vehicle {
 }
 
 $myShip = new Ship("yacht.jpg", "Yamaha", "Yacht", 2017, "white", "petrol", 20, 6);
-$myCanoe = new Ship("canoe.jpg", "Canoe", "Original", 1985, "brown", "hands", 5, 1);
+$myCanoe = new Ship("canoe.jpg", "Canoe", "Original", 1985, "brown", "arms", 5, 1);
 $myCruiseShip = new Ship("cruise.jpg", "Fincantieri", "BigAssShip", 2019, "white", "HFO", 300, 1000);
 
 echo "<div class='container'>";
@@ -74,7 +74,7 @@ $vehicles = [$myBike, $myCar, $myMotorcycle, $myShip, $myCanoe, $myCruiseShip];
 // echo var_dump($vehicles);
 // echo "</pre>";
 
-echo "<h3 class='text-center my-5'>Loop thru the array and put out name, model etc...</h3>";
+echo "<h3 class='text-center my-5'>Loop thru the array and output name, model etc...</h3>";
 
 $card = "";
 foreach($vehicles as $value) {
@@ -82,8 +82,8 @@ foreach($vehicles as $value) {
   // echo "$value->name<br>";
   $card .= "
 
-      <div>
-        <div class='card p-0 g-0 mb-5 shadow' style='width: 18rem;'>
+      <div class='d-flex justify-content-center'>
+        <div class='card p-0 g-0 mb-5 shadow' style='width: 18rem; border:none;'>
           <img src='images/" . $value->picture . "' class='card-img-top'>
           <div class='card-body'>
             <h5 class='card-title'>" . $value->name . "</h5>
@@ -100,8 +100,8 @@ foreach($vehicles as $value) {
   } else {
     $card .= "
 
-    <div>
-      <div class='card p-0 g-0 mb-5 shadow' style='width: 18rem;'>
+    <div class='d-flex justify-content-center'>
+      <div class='card p-0 g-0 mb-5 shadow' style='width: 18rem; border:none;'>
         <img src='images/" . $value->picture . "' class='card-img-top'>
         <div class='card-body'>
           <h5 class='card-title'>" . $value->name . "</h5>
@@ -134,7 +134,7 @@ foreach($vehicles as $value) {
 </head>
 <body>
   <div class='w-75 my-2 mx-auto'>
-    <div class='row row-cols-1 row-cols-md-2 row-cols-lg-3'>
+    <div class='row row-cols-1 row-cols-md-2 row-cols-xl-3'>
       <?= $card ?>
     </div>
   </div>  
