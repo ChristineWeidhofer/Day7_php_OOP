@@ -84,7 +84,7 @@ foreach($vehicles as $value) {
 
       <div>
         <div class='card p-0 g-0 mb-5 shadow' style='width: 18rem;'>
-          <img src='" . $value->picture . "' class='card-img-top'>
+          <img src='images/" . $value->picture . "' class='card-img-top'>
           <div class='card-body'>
             <h5 class='card-title'>" . $value->name . "</h5>
             <p class='card-text text-muted'>Fuel Type: " . $value->fuelType . "</p>
@@ -102,7 +102,7 @@ foreach($vehicles as $value) {
 
     <div>
       <div class='card p-0 g-0 mb-5 shadow' style='width: 18rem;'>
-        <img src='" . $value->picture . "' class='card-img-top'>
+        <img src='images/" . $value->picture . "' class='card-img-top'>
         <div class='card-body'>
           <h5 class='card-title'>" . $value->name . "</h5>
           <p class='card-text text-muted'>" . $value->showNameModel() . "</p>
